@@ -20,6 +20,7 @@
         <module>Camel</module>
         <module>Hazelcast</module>
         <module>MainConcepts</module>
+        <module>Arrays</module>
     </modules>
 
 </project>
