@@ -25,6 +25,7 @@
         <module>Maps</module>
         <module>Files</module>
         <module>Threads</module>
+        <module>ImageCompare</module>
     </modules>
 
 </project>
