@@ -23,6 +23,7 @@
         <module>Arrays</module>
         <module>Redis</module>
         <module>Maps</module>
+        <module>Files</module>
     </modules>
 
 </project>
