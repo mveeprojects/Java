@@ -24,6 +24,7 @@
         <module>Redis</module>
         <module>Maps</module>
         <module>Files</module>
+        <module>Threads</module>
     </modules>
 
 </project>
