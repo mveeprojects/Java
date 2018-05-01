@@ -17,6 +17,7 @@
     <modules>
         <module>Streams</module>
         <module>Agents</module>
+        <module>Camel</module>
     </modules>
 
 </project>
