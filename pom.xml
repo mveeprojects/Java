@@ -22,6 +22,7 @@
         <module>MainConcepts</module>
         <module>Arrays</module>
         <module>Redis</module>
+        <module>Maps</module>
     </modules>
 
 </project>

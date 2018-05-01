@@ -1,4 +1,4 @@
-# javaRedis
+# Redis
 
 Based on the tutorial below
 
