@@ -26,6 +26,7 @@
         <module>Files</module>
         <module>Threads</module>
         <module>ImageCompare</module>
+        <module>Algorithms</module>
     </modules>
 
 </project>
