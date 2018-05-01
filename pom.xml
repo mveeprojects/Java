@@ -21,6 +21,7 @@
         <module>Hazelcast</module>
         <module>MainConcepts</module>
         <module>Arrays</module>
+        <module>Redis</module>
     </modules>
 
 </project>
