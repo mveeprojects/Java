@@ -18,6 +18,8 @@
         <module>Streams</module>
         <module>Agents</module>
         <module>Camel</module>
+        <module>Hazelcast</module>
+        <module>MainConcepts</module>
     </modules>
 
 </project>
