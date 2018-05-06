@@ -28,6 +28,7 @@
         <module>ImageCompare</module>
         <module>Algorithms</module>
         <module>Dates</module>
+        <module>Games</module>
     </modules>
 
 </project>
