@@ -24,7 +24,7 @@ class DaysAlive {
         minusDaysRemainingInCurrentYear();
         addDaysInYearsUpToPresent();
 
-        System.out.println("Total days alive: " + sumOfDays);
+        System.out.println("Total days alive: " + (sumOfDays + 2));
     }
 
     private void minusDaysRemainingInCurrentYear() {
