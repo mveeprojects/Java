@@ -1,3 +1,5 @@
+package BinPacking;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -39,23 +41,24 @@ class BinPackingAlgo {
     }
 
     private void checkIfItemsFitInBins() {
-        int count = 0;
-        int binsize = numberOfItems - 1;
-        int i = 0;
-        while (i <= binsize) {
-            int tmpsize = binSize;
-            tmpsize = tmpsize - items.get(binsize--);
-            if (tmpsize >= items.get(i)) {
+        int numOfBinsRequired = 0, i = 0, remainingSpace = binSize;
+        while (i < numberOfItems) {
+            if (binSize >= items.get(i)) {
+                if (remainingSpace - items.get(i) > 0) {
+                    remainingSpace -= items.get(i);
+                    i++;
+                    continue;
+                }
                 i++;
-            } else if (tmpsize < items.get(i)) {
+            } else if (binSize < items.get(i)) {
                 System.out.println("one or more of the items exceeds the bin size");
                 success = false;
                 break;
             }
-            count++;
+            numOfBinsRequired++;
         }
         if (success) {
-            System.out.println("The Minimum number of bins required is " + count);
+            System.out.println("The Minimum number of bins required is " + numOfBinsRequired);
         } else {
             System.out.println("Failed to fit items in bins");
         }
