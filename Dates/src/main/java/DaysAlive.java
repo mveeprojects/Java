@@ -1,4 +1,4 @@
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 class DaysAlive {
 
@@ -10,18 +10,20 @@ class DaysAlive {
         this.dayOfBirth = dayOfBirth;
         this.monthOfBirth = monthOfBirth;
         this.yearOfBirth = yearOfBirth;
-        LocalDateTime currentDateTime = LocalDateTime.now();
-        this.currentDay = currentDateTime.getDayOfMonth();
-        this.currentMonth = currentDateTime.getMonthValue();
-        this.currentYear = currentDateTime.getYear();
+        LocalDate currentDate = LocalDate.now();
+        this.currentDay = currentDate.getDayOfMonth();
+        this.currentMonth = currentDate.getMonthValue();
+        this.currentYear = currentDate.getYear();
     }
 
     public void run() {
-        System.out.println("Date of birth (day/month/year): " + dayOfBirth + "/" + monthOfBirth + "/" + yearOfBirth);
-        System.out.println("Current date (day/month/year): " + currentDay + "/" + currentMonth + "/" + currentYear);
-        checkYearsUpToPresent();
+        System.out.println("Date of birth: " + dayOfBirth + "/" + monthOfBirth + "/" + yearOfBirth);
+        System.out.println("Current date: " + currentDay + "/" + currentMonth + "/" + currentYear);
+
         minusDaysBeforeBirth();
         minusDaysRemainingInCurrentYear();
+        addDaysInYearsUpToPresent();
+
         System.out.println("Total days alive: " + sumOfDays);
     }
 
@@ -43,7 +45,7 @@ class DaysAlive {
             if (i != monthOfBirth) {
                 count += numOfDaysInMonth(i, yearOfBirth);
             } else {
-                count += dayOfBirth;
+                count += dayOfBirth - 1;
             }
         }
         sumOfDays -= count;
@@ -74,13 +76,10 @@ class DaysAlive {
         return 0;
     }
 
-
-    private void checkYearsUpToPresent() {
+    private void addDaysInYearsUpToPresent() {
         int year = yearOfBirth;
-        int daysInYear;
         while (year <= currentYear) {
-            daysInYear = numOfDaysInYear(year);
-            sumOfDays += daysInYear;
+            sumOfDays += numOfDaysInYear(year);
             year++;
         }
     }
