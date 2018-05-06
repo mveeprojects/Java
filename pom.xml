@@ -27,6 +27,7 @@
         <module>Threads</module>
         <module>ImageCompare</module>
         <module>Algorithms</module>
+        <module>Dates</module>
     </modules>
 
 </project>
