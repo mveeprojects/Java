@@ -1,7 +1,7 @@
-package BinPacking;
+package ParameterOptimisation;
 
 public class Application {
     public static void main(String[] args) {
-        new BinPackingAlgo();
+        new ParamOpAlgo();
     }
 }
