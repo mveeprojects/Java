@@ -27,6 +27,18 @@ class DaysAlive {
         System.out.println("Total days alive: " + (sumOfDays + 2));
     }
 
+    private void minusDaysBeforeBirth() {
+        int count = 0;
+        for (int i = 1; i <= monthOfBirth; i++) {
+            if (i != monthOfBirth) {
+                count += numOfDaysInMonth(i, yearOfBirth);
+            } else {
+                count += dayOfBirth - 1;
+            }
+        }
+        sumOfDays -= count;
+    }
+
     private void minusDaysRemainingInCurrentYear() {
         int count = 0;
         for (int i = currentMonth; i <= 12; i++) {
@@ -39,16 +51,12 @@ class DaysAlive {
         sumOfDays -= count;
     }
 
-    private void minusDaysBeforeBirth() {
-        int count = 0;
-        for (int i = 1; i <= monthOfBirth; i++) {
-            if (i != monthOfBirth) {
-                count += numOfDaysInMonth(i, yearOfBirth);
-            } else {
-                count += dayOfBirth - 1;
-            }
+    private void addDaysInYearsUpToPresent() {
+        int year = yearOfBirth;
+        while (year <= currentYear) {
+            sumOfDays += numOfDaysInYear(year);
+            year++;
         }
-        sumOfDays -= count;
     }
 
     private int numOfDaysInMonth(int month, int year) {
@@ -74,14 +82,6 @@ class DaysAlive {
                 }
         }
         return 0;
-    }
-
-    private void addDaysInYearsUpToPresent() {
-        int year = yearOfBirth;
-        while (year <= currentYear) {
-            sumOfDays += numOfDaysInYear(year);
-            year++;
-        }
     }
 
     private int numOfDaysInYear(int year) {
