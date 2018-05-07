@@ -2,18 +2,18 @@ package Level_1.Lab7_BuiltInFunctions;
 
 import java.text.DecimalFormat;
 
-class Strings {
+class BuiltInFunctions_7_3 {
 
-    private String a = "Hello", b = "World";
+    private String a = "Hello", b = "World", c;
     private double x = 123.456, y = 17/3, z = Math.sqrt(2);
 
-
-    Strings() {
+    BuiltInFunctions_7_3() {
         System.out.println("\n\n*** Built In Functions and Methods 7.3 ***");
         formatting2dp();
         formatting3dp();
         countDigits();
         reverseAndConcat();
+        searchAndReplace();
     }
 
     private void formatting2dp(){
@@ -65,8 +65,14 @@ class Strings {
 
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(a);
-        String c = String.valueOf(stringBuilder.reverse()) + " " + b;
+        c = String.valueOf(stringBuilder.reverse()) + " " + b;
 
         System.out.println(c);
+    }
+
+    private void searchAndReplace() {
+        System.out.println("\n" + "4) Replace characters in a string");
+
+        System.out.println(c.replaceAll("ll", "ppp"));
     }
 }
