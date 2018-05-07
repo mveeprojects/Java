@@ -1,3 +1,5 @@
+package Arrays;
+
 class ArrayStuff {
 
     private static int sum = 0;
