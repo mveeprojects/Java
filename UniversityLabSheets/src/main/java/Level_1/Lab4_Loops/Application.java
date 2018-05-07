@@ -1,4 +1,4 @@
-package Level_1.Lab4;
+package Level_1.Lab4_Loops;
 
 public class Application {
 

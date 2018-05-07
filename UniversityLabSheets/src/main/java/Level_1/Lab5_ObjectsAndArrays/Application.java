@@ -1,4 +1,4 @@
-package Level_1.Lab5;
+package Level_1.Lab5_ObjectsAndArrays;
 
 public class Application {
 

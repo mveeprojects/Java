@@ -1,4 +1,4 @@
-package Level_1.Lab5;
+package Level_1.Lab5_ObjectsAndArrays;
 
 import java.util.ArrayList;
 import java.util.Collections;
