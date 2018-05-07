@@ -20,7 +20,7 @@
         <module>Camel</module>
         <module>Hazelcast</module>
         <module>MainConcepts</module>
-        <module>Arrays</module>
+        <module>Collections</module>
         <module>Redis</module>
         <module>Maps</module>
         <module>Files</module>
@@ -29,6 +29,7 @@
         <module>Algorithms</module>
         <module>Dates</module>
         <module>Games</module>
+        <module>UniversityLabSheets</module>
     </modules>
 
 </project>
