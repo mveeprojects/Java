@@ -5,5 +5,6 @@ public class Application {
         new BuiltInFunctions_7_3();
         new BuiltInFunctions_7_4();
         new BuiltInFunctions_7_5();
+        new BuiltInFunctions_7_6();
     }
 }
