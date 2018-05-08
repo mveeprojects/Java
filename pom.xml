@@ -30,6 +30,7 @@
         <module>Dates</module>
         <module>Games</module>
         <module>UniversityLabSheets</module>
+        <module>DesignPatterns</module>
     </modules>
 
 </project>
