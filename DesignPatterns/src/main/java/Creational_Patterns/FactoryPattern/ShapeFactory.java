@@ -1,4 +1,8 @@
-package FactoryPattern;
+package Creational_Patterns.FactoryPattern;
+
+import Creational_Patterns.FactoryPattern.Objects.Circle;
+import Creational_Patterns.FactoryPattern.Objects.Rectangle;
+import Creational_Patterns.FactoryPattern.Objects.Square;
 
 class ShapeFactory {
 

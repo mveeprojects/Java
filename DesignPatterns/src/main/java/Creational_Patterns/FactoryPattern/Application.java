@@ -1,4 +1,4 @@
-package FactoryPattern;
+package Creational_Patterns.FactoryPattern;
 
 public class Application {
 
