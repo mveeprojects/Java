@@ -1,28 +1,23 @@
 package Encapsulation;
 
-public class Person {
+class Person {
 
-    private String name;
     private int age;
+    private String name;
 
-    public Person(String name, int age) {
-        this.name = name;
+    void setAge(int age) {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    void setName(String name) {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    int getAge(boolean isAllowed) {
+        return isAllowed ? age : 0;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    String getName(boolean isAllowed) {
+        return isAllowed ? name : "default name";
     }
 }
