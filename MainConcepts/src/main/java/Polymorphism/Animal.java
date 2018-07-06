@@ -2,27 +2,25 @@ package Polymorphism;
 
 public class Animal {
 
-    private int numberOfLegs;
+    private int age;
+    private int numOfLegs;
     private String name;
 
-    public Animal(int numberOfLegs, String name) {
-        this.numberOfLegs = numberOfLegs;
+    Animal(int age, int numOfLegs, String name){
+        this.age = age;
+        this.numOfLegs = numOfLegs;
         this.name = name;
     }
 
-    public int getNumberOfLegs() {
-        return numberOfLegs;
+    public int getAge() {
+        return age;
     }
 
-    public void setNumberOfLegs(int numberOfLegs) {
-        this.numberOfLegs = numberOfLegs;
+    public int getNumOfLegs() {
+        return numOfLegs;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
