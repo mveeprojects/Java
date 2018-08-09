@@ -31,6 +31,7 @@
         <module>Games</module>
         <module>UniversityLabSheets</module>
         <module>DesignPatterns</module>
+        <module>DependencyInjection</module>
     </modules>
 
 </project>
