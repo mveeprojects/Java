@@ -3,7 +3,7 @@ package Encapsulation;
 public class Encapsulation {
 
     public Encapsulation(){
-        System.out.println("\nEncapsulation:");
+        System.out.println("\nEncapsulation:\n");
 
         Person p = new Person();
         p.setAge(32);

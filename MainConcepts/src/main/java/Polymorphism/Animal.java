@@ -20,7 +20,7 @@ public class Animal {
         return numOfLegs;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 }

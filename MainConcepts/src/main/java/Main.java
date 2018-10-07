@@ -1,7 +1,7 @@
-import Abstraction.Abstraction;
 import Encapsulation.Encapsulation;
 import Inheritance.Inheritance;
 import Polymorphism.Polymorphism;
+import Abstraction.Abstraction;
 
 public class Main {
 
