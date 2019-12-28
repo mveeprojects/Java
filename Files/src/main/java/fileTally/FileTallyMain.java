@@ -31,19 +31,19 @@ class FileTally {
     private List<String> retrieveFileLines(String filePath) throws Exception {
         File file = new File(filePath);
         BufferedReader br = new BufferedReader(new FileReader(file));
-        String st;
-        List<String> stringList = new ArrayList<>();
-        while ((st = br.readLine()) != null)
-            stringList.add(st);
+        String line;
+        List<String> lineList = new ArrayList<>();
+        while ((line = br.readLine()) != null)
+            lineList.add(line);
         br.close();
-        return stringList;
+        return lineList;
     }
 
     private HashMap<String, Integer> calculateOccurrences(List<String> stringList, Set<String> uniqueValues) {
         HashMap<String, Integer> resultMap = new HashMap<>();
-        uniqueValues.forEach(a -> {
-                    int frequency = Collections.frequency(stringList, a);
-                    resultMap.put(a, frequency);
+        uniqueValues.forEach(uniqueValue -> {
+                    int frequency = Collections.frequency(stringList, uniqueValue);
+                    resultMap.put(uniqueValue, frequency);
                 }
         );
         return resultMap;
