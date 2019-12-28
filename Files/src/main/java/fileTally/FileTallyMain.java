@@ -50,14 +50,11 @@ class FileTally {
     }
 
     private HashMap<String, Integer> retrieveTopFiveOccurrences(HashMap<String, Integer> occurrenceMap) {
-        int count = 0;
-        HashMap<String, Integer> result = new HashMap<>();
-        for (Map.Entry<String, Integer> entry : occurrenceMap.entrySet()) {
-            if (count == 5) break;
-            result.put(entry.getKey(), entry.getValue());
-            count++;
-        }
-        return result;
+        return occurrenceMap
+                .entrySet()
+                .stream()
+                .limit(5)
+                .collect(toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e2, LinkedHashMap::new));
     }
 
     private HashMap<String, Integer> sortMapOutput(HashMap<String, Integer> mapToSort) {
