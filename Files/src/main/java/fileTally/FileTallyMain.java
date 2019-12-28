@@ -20,9 +20,9 @@ class FileTally {
         try {
             List<String> stringList = retrieveFileLines(filePath);
             Set<String> uniqueValues = new HashSet<>(stringList);
-            HashMap<String, Integer> occurrenceMap = sortMapOutput(calculateOccurances(stringList, uniqueValues));
-            HashMap<String, Integer> topFiveOccurances = sortMapOutput(retrieveTopFiveOccurances(occurrenceMap));
-            printMap(topFiveOccurances);
+            HashMap<String, Integer> occurrenceMap = sortMapOutput(calculateOccurrences(stringList, uniqueValues));
+            HashMap<String, Integer> topFiveOccurrences = sortMapOutput(retrieveTopFiveOccurrences(occurrenceMap));
+            printMap(topFiveOccurrences);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,7 +39,7 @@ class FileTally {
         return stringList;
     }
 
-    private HashMap<String, Integer> calculateOccurances(List<String> stringList, Set<String> uniqueValues) {
+    private HashMap<String, Integer> calculateOccurrences(List<String> stringList, Set<String> uniqueValues) {
         HashMap<String, Integer> resultMap = new HashMap<>();
         uniqueValues.forEach(a -> {
                     int frequency = Collections.frequency(stringList, a);
@@ -49,7 +49,7 @@ class FileTally {
         return resultMap;
     }
 
-    private HashMap<String, Integer> retrieveTopFiveOccurances(HashMap<String, Integer> occurrenceMap) {
+    private HashMap<String, Integer> retrieveTopFiveOccurrences(HashMap<String, Integer> occurrenceMap) {
         int count = 0;
         HashMap<String, Integer> result = new HashMap<>();
         for (Map.Entry<String, Integer> entry : occurrenceMap.entrySet()) {
