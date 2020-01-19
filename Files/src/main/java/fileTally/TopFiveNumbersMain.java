@@ -7,15 +7,16 @@ import java.util.*;
 
 import static java.util.stream.Collectors.toMap;
 
-public class FileTallyMain {
+public class TopFiveNumbersMain {
     public static void main(String[] args) {
-        new FileTally();
+        new TopFiveNumbers();
     }
 }
 
-class FileTally {
+class TopFiveNumbers {
 
-    FileTally() {
+    TopFiveNumbers() {
+        // replace the string value below with the full path to testfile.txt on your machine
         String filePath = "D:\\Workspace\\Java\\Files\\src\\main\\java\\fileTally\\testfile.txt";
         try {
             List<String> stringList = retrieveFileLines(filePath);
